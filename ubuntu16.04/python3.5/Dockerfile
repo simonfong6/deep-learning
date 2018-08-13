@@ -1,7 +1,7 @@
 FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 # Update system.
-RUN sudo apt-get -y update \
+RUN sudo apt-get -y update && \
     sudo apt-get -y upgrade
 
 # Install Python3
