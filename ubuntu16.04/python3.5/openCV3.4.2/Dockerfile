@@ -23,16 +23,19 @@ RUN apt-get install -y libtiff5-dev && \
 # Python depedencies
 RUN pip install numpy scipy matplotlib scikit-image scikit-learn ipython
 
+# Set OpenCV version.
+ENV OPENCV_VERSION 3.4.2
+
 # OpenCV
 RUN git clone https://github.com/opencv/opencv.git && \
     cd opencv && \
-    git checkout 3.4.2 && \
+    git checkout $OPENCV_VERSION && \
     cd ..
 
 # OpenCV Contrib
 RUN git clone https://github.com/opencv/opencv_contrib.git && \
     cd opencv_contrib && \
-    git checkout 3.4.2 && \
+    git checkout $OPENCV_VERSION && \
     cd ..
 
 # Compile and install
