@@ -1,5 +1,7 @@
 FROM simonfong6/deep-learning:9.0-cudnn7-devel-ubuntu16.04-python3.5
 
+# Thanks to https://www.learnopencv.com/install-opencv3-on-ubuntu/
+
 # Remove any previous installations of x264</h3>
 RUN apt-get remove x264 libx264-dev
  
