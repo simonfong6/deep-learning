@@ -21,7 +21,7 @@ RUN apt-get install -y libtiff5-dev && \
     apt-get install -y x264 v4l-utils
 
 # Python depedencies
-RUN pip install numpy scipy matplotlib scikit-image scikit-learn ipython
+RUN pip3 install numpy scipy matplotlib scikit-image scikit-learn ipython
 
 # Set OpenCV version.
 ENV OPENCV_VERSION 3.4.2
